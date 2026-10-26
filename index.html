@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="th"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tikstudio — ดาวน์โหลดฟรี | King Studio</title>
+<meta name="description" content="Tikstudio โปรแกรมสำหรับสตรีมเมอร์ TikTok — ดาวน์โหลดฟรี">
+<link rel="icon" href="img/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;600;800&family=Prompt:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07060d;--card:rgba(255,255,255,.05);--line:rgba(255,255,255,.1);--t:#f4f2ff;--mute:#a9a3c4;--a:#a855f7;--b:#ec4899;--c:#22d3ee}
+*{box-sizing:border-box}[hidden]{display:none!important}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--t);font-family:Prompt,Kanit,system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.glow{position:fixed;border-radius:50%;filter:blur(110px);opacity:.38;pointer-events:none;z-index:0}
+.g1{width:620px;height:620px;background:var(--a);left:-220px;top:-240px}.g2{width:560px;height:560px;background:var(--b);right:-220px;top:240px;opacity:.25}.g3{width:520px;height:520px;background:var(--c);left:30%;bottom:-320px;opacity:.16}
+.wrap{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:0 20px}
+nav{display:flex;align-items:center;gap:12px;padding:18px 0}
+nav img{width:44px;height:44px;object-fit:contain;filter:drop-shadow(0 0 12px rgba(168,85,247,.7))}
+nav b{font-family:Kanit;font-size:22px;letter-spacing:.5px}nav .sp{flex:1}
+nav a.nl{color:var(--mute);font-size:15px;padding:8px 12px;border-radius:10px}nav a.nl:hover{color:#fff;background:var(--card)}
+.hero{display:grid;grid-template-columns:1.05fr 1fr;gap:44px;align-items:center;padding:46px 0 70px}
+.tag{display:inline-flex;gap:8px;align-items:center;padding:6px 14px;border-radius:999px;background:rgba(168,85,247,.14);border:1px solid rgba(168,85,247,.4);color:#e9d5ff;font-size:14px}
+.tag i{width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 10px #4ade80}
+h1{font-family:Kanit;font-weight:800;font-size:clamp(40px,6vw,74px);line-height:1.02;margin:18px 0 14px}
+h1 span{background:linear-gradient(90deg,#c084fc,#f472b6,#22d3ee);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:18px;color:var(--mute);line-height:1.75;max-width:560px}
+.dl{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:12px;padding:18px 30px;border-radius:18px;font-family:Kanit;font-weight:600;font-size:21px;cursor:pointer;border:0;transition:transform .15s,box-shadow .2s}
+.btn.main{background:linear-gradient(135deg,#a855f7,#ec4899);color:#fff;box-shadow:0 14px 40px rgba(236,72,153,.35),inset 0 1px 0 rgba(255,255,255,.3)}
+.btn.main:hover{transform:translateY(-3px);box-shadow:0 20px 50px rgba(236,72,153,.5)}
+.btn.main small{display:block;font-family:Prompt;font-weight:400;font-size:13px;opacity:.85}
+.btn.ghost{background:var(--card);border:1px solid var(--line);color:#fff;font-size:17px;padding:16px 22px}
+.btn.ghost:hover{background:rgba(255,255,255,.1)}
+.meta{display:flex;gap:18px;flex-wrap:wrap;margin-top:18px;color:var(--mute);font-size:14px}
+.meta b{color:#fff}
+.shot-hero{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 80px rgba(0,0,0,.6),0 0 0 1px rgba(168,85,247,.25);transform:perspective(1400px) rotateY(-8deg) rotateX(3deg);transition:transform .4s}
+.shot-hero:hover{transform:none}
+.shot-hero img{display:block;width:100%}
+.shot-hero .bar{display:flex;gap:6px;padding:10px 12px;background:#0d0b16;border-bottom:1px solid var(--line)}
+.shot-hero .bar i{width:11px;height:11px;border-radius:50%;background:#ff5f57}.shot-hero .bar i:nth-child(2){background:#febc2e}.shot-hero .bar i:nth-child(3){background:#28c840}
+section{padding:60px 0}
+h2{font-family:Kanit;font-size:clamp(28px,4vw,42px);margin:0 0 8px;text-align:center}
+.sub{color:var(--mute);text-align:center;margin:0 auto 34px;max-width:640px;line-height:1.7}
+.feat{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.f{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;transition:transform .2s,border-color .2s}
+.f:hover{transform:translateY(-4px);border-color:rgba(168,85,247,.55)}
+.f .ic{font-size:30px;width:56px;height:56px;display:grid;place-items:center;border-radius:16px;background:linear-gradient(135deg,rgba(168,85,247,.25),rgba(236,72,153,.18));margin-bottom:12px}
+.f b{font-family:Kanit;font-size:19px;display:block;margin-bottom:6px}.f p{margin:0;color:var(--mute);line-height:1.65;font-size:15px}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.g{border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#0d0b16;cursor:zoom-in;position:relative;transition:transform .2s}
+.g:hover{transform:scale(1.02)}
+.g img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover}
+.g span{position:absolute;left:10px;bottom:10px;background:rgba(7,6,13,.8);backdrop-filter:blur(6px);padding:5px 12px;border-radius:999px;font-size:14px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:s}
+.st{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px;position:relative}
+.st::before{counter-increment:s;content:counter(s);position:absolute;top:-14px;left:18px;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font-family:Kanit;font-weight:800;background:linear-gradient(135deg,#a855f7,#ec4899)}
+.st b{display:block;font-family:Kanit;font-size:18px;margin:8px 0 6px}.st p{margin:0;color:var(--mute);line-height:1.6;font-size:14.5px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 20px;margin-bottom:10px}
+.faq summary{cursor:pointer;font-family:Kanit;font-size:18px}.faq p{color:var(--mute);line-height:1.7;margin:10px 0 0}
+.cta{text-align:center;padding:50px 24px;border-radius:28px;background:linear-gradient(135deg,rgba(168,85,247,.22),rgba(236,72,153,.16));border:1px solid rgba(168,85,247,.35)}
+footer{color:var(--mute);text-align:center;padding:40px 0 50px;font-size:14px}
+#lb{position:fixed;inset:0;background:rgba(0,0,0,.88);display:none;align-items:center;justify-content:center;z-index:50;padding:20px;cursor:zoom-out}
+#lb.on{display:flex}#lb img{max-width:96vw;max-height:90vh;border-radius:14px;box-shadow:0 20px 60px rgba(0,0,0,.6)}
+.rev{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}.rev.on{opacity:1;transform:none}
+@media (max-width:900px){.hero{grid-template-columns:1fr;padding-top:20px}.shot-hero{transform:none}.gal{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}nav a.nl{display:none}}
+@media (max-width:560px){.gal,.steps{grid-template-columns:1fr}.btn{width:100%;justify-content:center}}
+</style></head>
+<body>
+<div class="glow g1"></div><div class="glow g2"></div><div class="glow g3"></div>
+<div class="wrap">
+  <nav><img src="img/logo.png" alt=""><b>Tikstudio</b><span class="sp"></span><a class="nl" href="#features">ความสามารถ</a><a class="nl" href="#shots">ตัวอย่าง</a><a class="nl" href="#how">วิธีติดตั้ง</a><a class="nl" href="#faq">คำถาม</a></nav>
+  <div class="hero">
+    <div>
+      <span class="tag"><i></i> <span id="tagTxt">ดาวน์โหลดฟรี · เวอร์ชันล่าสุด</span></span>
+      <h1 id="ttl">โปรแกรมไลฟ์ <span>TikTok</span><br>ครบในตัวเดียว</h1>
+      <p class="lead" id="lead"></p>
+      <div class="dl">
+        <a class="btn main" id="dlBtn" href="#"><span style="font-size:28px">⬇️</span><span>ดาวน์โหลดฟรี<small id="dlInfo">Windows 10 / 11 · 64-bit</small></span></a>
+        <a class="btn ghost" id="discord" href="#" target="_blank" rel="noopener" hidden>💬 Discord</a>
+      </div>
+      <div class="meta"><span>🆓 <b>ฟรี</b></span><span>🪟 <b>Windows</b></span><span>⚡ <b>อัปเดตในโปรแกรม</b> กดปุ่มเดียว</span><span id="verMeta"></span></div>
+    </div>
+    <div class="shot-hero rev"><div class="bar"><i></i><i></i><i></i></div><img id="heroImg" src="img/home.jpg" alt="Tikstudio"></div>
+  </div>
+
+  <section id="features" class="rev">
+    <h2>ทำอะไรได้บ้าง</h2>
+    <p class="sub">ต่อไลฟ์ TikTok แล้วให้ของขวัญ ใจ คอมเมนต์ ทำงานเอง — เสียง รูป เกม มายคราฟ นับวิน โดเนท ครบ</p>
+    <div class="feat" id="feat"></div>
+  </section>
+
+  <section id="shots" class="rev">
+    <h2>ตัวอย่างโปรแกรม</h2>
+    <p class="sub">หน้าตาจริงจากในโปรแกรม (คลิกที่รูปเพื่อดูใหญ่)</p>
+    <div class="gal" id="gal"></div>
+  </section>
+
+  <section id="how" class="rev">
+    <h2>วิธีติดตั้ง</h2>
+    <p class="sub">ไม่ต้องติดตั้งให้ยุ่งยาก ดาวน์โหลดแล้วเปิดใช้ได้เลย</p>
+    <div class="steps">
+      <div class="st"><b>ดาวน์โหลด</b><p>กดปุ่ม “ดาวน์โหลดฟรี” จะได้ไฟล์ Tikstudio.exe</p></div>
+      <div class="st"><b>เปิดโปรแกรม</b><p>ดับเบิลคลิก Tikstudio.exe — ถ้า Windows ขึ้นเตือนสีฟ้า กด “ข้อมูลเพิ่มเติม” → “เรียกใช้ต่อไป”</p></div>
+      <div class="st"><b>ขอรหัสเข้าใช้</b><p>คัดลอก “รหัสเครื่อง” ในหน้าแรกของโปรแกรม ส่งให้ King Studio เพื่อรับรหัส 6 หลัก</p></div>
+      <div class="st"><b>เริ่มไลฟ์!</b><p>ใส่ชื่อช่อง TikTok กดเชื่อมต่อ แล้วตั้งแอคชั่นได้เลย · มีเวอร์ชันใหม่กดอัปเดตในโปรแกรมได้ทันที</p></div>
+    </div>
+  </section>
+
+  <section id="faq" class="rev faq">
+    <h2>คำถามที่พบบ่อย</h2><p class="sub"></p>
+    <div id="faqList"></div>
+  </section>
+
+  <section class="rev"><div class="cta">
+    <h2 style="margin-bottom:12px">พร้อมไลฟ์ให้ปังแล้วใช่ไหม?</h2>
+    <p class="sub" style="margin-bottom:22px">ดาวน์โหลด Tikstudio ฟรี แล้วเริ่มสนุกกับคนดูได้วันนี้</p>
+    <a class="btn main" id="dlBtn2" href="#"><span style="font-size:26px">⬇️</span><span>ดาวน์โหลดฟรี</span></a>
+  </div></section>
+  <footer>© <span id="yr"></span> King Studio · Tikstudio</footer>
+</div>
+<div id="lb"><img alt=""></div>
+<script>
+const C = Object.assign({
+  title: '', lead: 'Tikstudio โปรแกรมสำหรับสตรีมเมอร์ TikTok — ของขวัญ ใจ ติดตาม คอมเมนต์ เปิดเสียง ขึ้นรูป กดปุ่ม เล่นเกม คุมแมพมายคราฟ นับวิน รับโดเนท และอัดคลิป ทั้งหมดในโปรแกรมเดียว',
+  link: '', owner: 'plasticboxplasticbox-stack', repo: 'tikstudio-update', discord: '',
+  features: [], shots: [], faq: [],
+}, {"link":"https://plasticboxplasticbox-stack.github.io/tikstudio-download/","discord":""} || {});
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const LINK = C.link || `https://github.com/${C.owner}/${C.repo}/releases/latest/download/Tikstudio.exe`;
+for (const b of [$('#dlBtn'), $('#dlBtn2')]) b.href = LINK;
+if (C.title) $('#ttl').innerHTML = esc(C.title);
+$('#lead').textContent = C.lead;
+if (C.discord) { $('#discord').hidden = false; $('#discord').href = C.discord; }
+$('#yr').textContent = new Date().getFullYear();
+const FEAT = C.features.length ? C.features : [
+  ['🎁', 'แอคชั่นจากไลฟ์', 'ของขวัญ ใจ ติดตาม แชร์ คอมเมนต์ → เล่นเสียง ขึ้นรูป/วิดีโอ กดปุ่มคีย์บอร์ด ได้เอง'],
+  ['⛏️', 'แมพมายคราฟ', 'ต่อบล็อก หาเพชร ขุดทราย ต่อตึก หนีรถ และอีกเพียบ — เปิดเซิร์ฟในโปรแกรม คนดูส่งของขวัญแล้วในเกมเปลี่ยน'],
+  ['🎮', 'เกมในตัว', 'SkyBlock, ยิงซอมบี้, ขัดกำแพง 3D — ใส่ใน TikTok LIVE Studio ได้'],
+  ['🏆', 'นับวิน / สุ่มวิน / จับเวลา', 'หลายแบบ ปรับฟอนต์ สี ขนาด ใส่คำว่า WIN ด้านหลัง กล่องนับวิน'],
+  ['💸', 'รับโดเนท', 'หน้าเว็บโดเนทของตัวเอง สแกนสลิปอัตโนมัติ แจ้งเตือนขึ้นจอสวยๆ สิริอ่านข้อความ'],
+  ['✨', 'โอเวอร์เลย์พิเศษ', 'แก้วของขวัญ แก้วคอมเมนต์ แข่งส่งเหรียญ โปรไฟล์เรืองแสง แถบคอมเมนต์'],
+  ['🎥', 'อัดคลิป + ตัดต่อรูป', 'อัดจอพร้อมกล้อง หน้าเนียน ลบพื้นหลังด้วย AI ใส่รูป ตัดขอบแบบ OBS'],
+  ['🔗', 'ลิงก์ถาวร', 'ใส่ใน TikTok LIVE Studio ครั้งเดียว ใช้ได้ตลอด ไม่ต้องเปลี่ยนลิงก์'],
+];
+$('#feat').innerHTML = FEAT.map(f => `<div class="f"><div class="ic">${esc(f[0])}</div><b>${esc(f[1])}</b><p>${esc(f[2])}</p></div>`).join('');
+const SHOTS = C.shots.length ? C.shots : [['img/home.jpg', 'หน้าแรก'], ['img/actions.jpg', 'อีเว้นท์แอคชั่น'], ['img/minecraft.jpg', 'แมพมายคราฟ'], ['img/special.jpg', 'โอเวอร์เลย์พิเศษ'], ['img/win.jpg', 'นับวิน'], ['img/games.jpg', 'เกม'], ['img/cleanwall.jpg', 'เกมขัดกำแพง 3D'], ['img/zombie.jpg', 'เกมยิงซอมบี้'], ['img/donate.jpg', 'แจ้งเตือนโดเนท']];
+$('#gal').innerHTML = SHOTS.map(s => `<div class="g" data-src="${esc(s[0])}"><img loading="lazy" src="${esc(s[0])}" alt="${esc(s[1])}"><span>${esc(s[1])}</span></div>`).join('');
+const FAQ = C.faq.length ? C.faq : [
+  ['ดาวน์โหลดฟรีจริงไหม?', 'ดาวน์โหลดฟรี ใช้งานต้องมีรหัสเข้าใช้ 6 หลัก (1 รหัส ใช้ได้คอมเครื่องเดียว) ติดต่อ King Studio'],
+  ['ใช้กับคอมแบบไหนได้บ้าง?', 'Windows 10 / 11 แบบ 64-bit · แนะนำให้ไดรฟ์ C ว่างอย่างน้อย 2 GB'],
+  ['อัปเดตยังไง?', 'มีเวอร์ชันใหม่ โปรแกรมจะขึ้นปุ่มอัปเดตเอง กดปุ่มเดียว โหลดแล้วเปิดใหม่ให้อัตโนมัติ'],
+  ['Windows ขึ้นเตือนตอนเปิด ทำยังไง?', 'กด “ข้อมูลเพิ่มเติม (More info)” แล้วกด “เรียกใช้ต่อไป (Run anyway)” — เตือนเพราะโปรแกรมยังไม่ได้ซื้อใบรับรองจาก Microsoft'],
+];
+$('#faqList').innerHTML = FAQ.map(q => `<details><summary>${esc(q[0])}</summary><p>${esc(q[1])}</p></details>`).join('');
+// lightbox
+$('#gal').addEventListener('click', (e) => { const g = e.target.closest('.g'); if (!g) return; $('#lb img').src = g.dataset.src; $('#lb').classList.add('on'); });
+$('#heroImg').onclick = () => { $('#lb img').src = $('#heroImg').src; $('#lb').classList.add('on'); };
+$('#lb').onclick = () => $('#lb').classList.remove('on');
+// reveal
+const io = new IntersectionObserver((es) => es.forEach(x => { if (x.isIntersecting) { x.target.classList.add('on'); io.unobserve(x.target); } }), { threshold: .12 });
+document.querySelectorAll('.rev').forEach(el => io.observe(el));
+// เวอร์ชันล่าสุด (จาก GitHub)
+fetch(`https://api.github.com/repos/${C.owner}/${C.repo}/releases?per_page=10`).then(r => r.ok ? r.json() : null).then(list => {
+  const j = Array.isArray(list) ? list.find(x => !x.draft && (x.assets || []).some(a => a.name === 'Tikstudio.exe')) : null;
+  if (!j) return;
+  if (!C.link) { const a0 = j.assets.find(a => a.name === 'Tikstudio.exe'); for (const b of [$('#dlBtn'), $('#dlBtn2')]) b.href = a0.browser_download_url; }
+  const v = String(j.tag_name || '').replace(/^v/, ''), a = (j.assets || []).find(x => x.name === 'Tikstudio.exe');
+  const d = j.published_at ? new Date(j.published_at).toLocaleDateString('th-TH', { day: 'numeric', month: 'short', year: 'numeric' }) : '';
+  if (v) { $('#tagTxt').textContent = 'ดาวน์โหลดฟรี · เวอร์ชัน ' + v; $('#verMeta').innerHTML = '🗓️ อัปเดตล่าสุด <b>' + esc(d) + '</b>'; }
+  $('#dlInfo').textContent = 'Windows 10 / 11 · v' + v + (a ? ' · ' + Math.round(a.size / 1048576) + ' MB' : '');
+}).catch(() => {});
+</script>
+</body></html>
